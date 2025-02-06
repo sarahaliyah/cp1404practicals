@@ -1,3 +1,8 @@
+MINIMUM_SCORE = 0
+PASSING_SCORE = 50
+EXCELLENT_SCORE = 90
+MAXIMUM_SCORE = 100
+
 MENU = """(G)et a valid score
 (P)rint the result
 (S)how stars
@@ -34,7 +39,7 @@ def main():
 def get_valid_score():
     """get valid score between 0 - 100 inclusive from user"""
     score = float(input("Enter score: "))
-    while score < 0 or score > 100:
+    while score < MINIMUM_SCORE or score > MAXIMUM_SCORE:
         print("Invalid score please enter again!")
         score = float(input("Enter score: "))
     return score
@@ -42,9 +47,9 @@ def get_valid_score():
 
 def determine_result(score):
     """determine result based on the score"""
-    if score >= 90:
+    if score >= EXCELLENT_SCORE:
         return "Excellent"
-    elif score >= 50:
+    elif score >= PASSING_SCORE:
         return "Passable"
     else:
         return "Bad"
