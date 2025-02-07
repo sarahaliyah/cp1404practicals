@@ -4,12 +4,12 @@ Pseudocode for temperature conversion
 """
 
 MENU = """C - Convert Celsius to Fahrenheit
-    F - Convert Fahrenheit to Celsius
-    Q - Quit"""
+F - Convert Fahrenheit to Celsius
+Q - Quit"""
 
 
 def main():
-    """convert user input from one temperature unit to another"""
+    """convert user input from one unit temperature to another"""
     print(MENU)
     choice = input(">>> ").upper()
     while choice != "Q":
