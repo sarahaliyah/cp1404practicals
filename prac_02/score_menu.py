@@ -33,7 +33,7 @@ def main():
             print("Invalid Choice!")
         print(MENU)
         choice = input(">>> ").upper()
-    print("Goodbye! See you again")
+    print("Goodbye! See you again.")
 
 
 def get_valid_score():
