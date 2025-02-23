@@ -36,4 +36,3 @@ def display_subjects(subjects):
 
 
 main()
-
