@@ -85,6 +85,7 @@ def display_projects(projects):
     for project in sorted(complete):
         print(f"  {project}")
 
+
 def filter_projects_by_date(projects, date):
     """Filter projects starting after the specified date."""
     try:
@@ -98,7 +99,7 @@ def filter_projects_by_date(projects, date):
 
 
 def add_project(projects):
-    """Add a new project to the list."""
+    """Add a new project to the project list."""
     print("Let's add a new project")
     name = input("Name: ")
     try:
@@ -111,3 +112,34 @@ def add_project(projects):
         print(f"Project '{name}' added successfully!")
     except ValueError:
         print("Invalid input. Ensure priority, cost, and completion percentage are numeric.")
+
+
+def update_project(projects):
+    """Update details of an existing project."""
+    # print("\nChoose a project to update:")
+    for i, project in enumerate(projects):
+        print(f"{i}: {project}")
+
+    try:
+        project_index = int(input("Project choice: "))
+        if project_index < 0 or project_index >= len(projects):
+            print("Invalid selection.")
+            return
+
+        project = projects[project_index]
+        print(f"\nUpdating project: {project}")
+
+        new_completion_percentage = input("New Percentage: ").strip()
+        new_priority = input("New Priority: ").strip()
+
+        if new_completion_percentage:
+            project.completion_percentage = int(new_completion_percentage)
+        if new_priority:
+            project.priority = int(new_priority)
+
+        print(f"Project '{project.name}' updated successfully!")
+    except ValueError:
+        print("Invalid input. Ensure numbers are entered correctly.")
+
+
+main()
