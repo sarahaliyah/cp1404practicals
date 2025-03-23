@@ -17,7 +17,7 @@ MENU = ("- (L)oad projects \n"
 
 
 def main():
-    """Program for a project management that track project completion and project details that user wish to complete."""
+    """Program to manage and track project details and completion status."""
     projects = load_projects(FILENAME)
     print("Welcome to Pythonic Project Management")
     print(f"Load {len(projects)} projects from {FILENAME}")
@@ -51,4 +51,16 @@ def main():
     else:
         print("No changes were saved.")
     print("Thank you for using custom-built project management software.")
+
+
+def load_projects(filename):
+    """Load projects from a file and return a list of project objects."""
+    projects = []
+    with open(filename, "r") as file:
+        file.readline()  # Skip header line
+        for line in file:
+            name, start_date, priority, cost_estimate, completion_percentage = line.strip().split('\t')
+            projects.append(Project(name, datetime.strptime(start_date, "%d/%m/%Y").date(), int(priority), float(cost_estimate), int(completion_percentage)))
+    return projects
+
 
