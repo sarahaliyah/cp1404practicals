@@ -10,3 +10,7 @@ My name is Sarah Aliyah, 19-year-old from Brunei, is pursuing a Bachelor of Scie
 - Use meaningful names, proper indentation, and clear structure.
 - Write small, single-purpose functions for easier debugging.
 - Avoid repetition with reusable functions and classes.
+
+## Links
+- https://github.com/CP1404/Starter/wiki/Programming-Patterns
+- https://github.com/CP1404/Practicals/tree/master
