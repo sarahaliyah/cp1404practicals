@@ -1,4 +1,4 @@
- CP1404 Practical 7
+## CP1404 Practical 7
 
 ## About This Repository
 This repository contains weekly practical exercises for CP1404 module that focuses on programming patterns and clean coding practices. 
