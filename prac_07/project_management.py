@@ -57,7 +57,7 @@ def load_projects(filename):
     """Load projects from a file and return a list of project objects."""
     projects = []
     with open(filename, "r") as file:
-        file.readline()  # Skip header line
+        file.readline()
         for line in file:
             name, start_date, priority, cost_estimate, completion_percentage = line.strip().split('\t')
             projects.append(Project(name, datetime.strptime(start_date, "%d/%m/%Y").date(), int(priority), float(cost_estimate), int(completion_percentage)))
@@ -116,7 +116,6 @@ def add_project(projects):
 
 def update_project(projects):
     """Update details of an existing project."""
-    # print("\nChoose a project to update:")
     for i, project in enumerate(projects):
         print(f"{i}: {project}")
 
