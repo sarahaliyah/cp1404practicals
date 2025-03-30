@@ -3,7 +3,7 @@ from kivy.lang import Builder
 
 
 class BoxLayoutDemo(App):
-    """Kivy application demonstrating BoxLayout with a greeting feature."""
+    """Kivy application demonstrating BoxLayout with greeting feature."""
     def build(self):
         """Load and return the app interface from the KV file."""
         self.title = "Box Layout Demo"
